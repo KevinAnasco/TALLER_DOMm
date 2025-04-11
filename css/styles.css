@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    display: inline-block;
+}
+
+.titulo-principal::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.titulo-principal:hover::after {
+    transform: scaleX(1);
+}
+
+.contenedor-imagen {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contenedor-imagen img.decoracion {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.contenedor-app {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    color: #4A4A4A;
+    font-size: 24px;
+}
+
+.contenedor-entrada {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.boton {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.boton:hover {
+    background-color: #218838;
+}
+
+.tarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.tarea:hover {
+    transform: scale(1.03);
+}
+
+.tarea-completada {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
+}
+
+.botones-tarea {
+    display: flex;
+    gap: 5px;
+}
+
+.boton-eliminar {
+    background-color: #dc3545;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.boton-eliminar:hover {
+    background-color: #c82333;
+}
+
+.boton-editar {
+    background-color: #ffc107;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.boton-editar:hover {
+    background-color: #e0a800;
+}
+
+.texto-tarea {
+    flex: 1;
+    text-align: left;
+}
+
+#contador-tareas {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}

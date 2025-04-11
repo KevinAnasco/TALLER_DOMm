@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<h1 class="titulo-principal">To-Do List</h1>
+
+<div class="contenedor-imagen">
+    <img src="https://static.vecteezy.com/system/resources/previews/005/908/719/non_2x/cute-to-do-list-with-cats-and-paws-in-cartoon-doodle-style-pink-planner-with-cute-animals-illustration-vector.jpg" alt="Decoración" class="decoracion">
+</div>
+
+<div class="contenedor-app">
+    <div class="contenedor-entrada">
+    <input type="text" id="titulo-tarea" placeholder="Nueva tarea">
+    <input type="date" id="fecha-tarea">
+    <button class="boton" onclick="agregarTarea()">Agregar</button>
+    </div>
+
+    <div id="contador-tareas">Tareas pendientes: 0</div>
+
+    <div id="lista-tareas"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
